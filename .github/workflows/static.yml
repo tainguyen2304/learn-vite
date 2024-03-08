@@ -34,8 +34,8 @@ jobs:
       - name: Set Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18,
-          cache: 'yarn'
+          node-version: 20.11.1,
+          cache: "yarn"
       - name: Install Dependencies
         run: yarn
       - name: Build
@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './dist'
+          path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
